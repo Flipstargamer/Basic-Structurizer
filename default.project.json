@@ -1,0 +1,17 @@
+{
+  "name": "basic-structurizer",
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "Struct": {
+        "$path": "src/MainPlugin",
+
+        "Packages": {
+          "$path": "src/Packages"
+        }
+      }
+    }
+  }
+}
