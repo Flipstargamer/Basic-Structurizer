@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        lua-version: [ '5.1', '5.2', '5.3', '5.4' ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Lua ${{ matrix.lua-version }}
+      uses: dannyben/sh-action-lua@v1
+      with:
+        lua-version: ${{ matrix.lua-version }}
+    - name: Install dependencies
+      run: luarocks install selene
+    - name: Run tests
+      run: selene --display-style quiet --output-format junit test.lua > test-results.xml
