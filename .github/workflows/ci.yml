@@ -24,4 +24,4 @@ jobs:
     - name: Install dependencies
       run: luarocks install selene
     - name: Run tests
-      run: selene --display-style quiet --output-format junit test.lua > test-results.xml
+      run: selene ./src
