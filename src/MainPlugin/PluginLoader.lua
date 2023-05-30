@@ -23,8 +23,7 @@ function pluginLoader:Init(plugin: Plugin)
     end)
 
     self.SettingsButton.Click:Connect(function()
-        self.Settings:Set("ScriptsFolderName", tostring(math.random(1, 40)))
-        --self.GuiService:OpenSettingsGui() <- return this
+        self.GuiService:OpenSettingsGui()
     end)
 end
 
