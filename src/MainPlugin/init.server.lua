@@ -1,1 +1,3 @@
-local basicLoader = require(script:WaitForChild("BasicLoader"))
+local loader = require(script:WaitForChild("PluginLoader"))
+
+loader:Init(plugin)

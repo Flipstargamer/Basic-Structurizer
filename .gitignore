@@ -4,4 +4,6 @@
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
+/*.rbxl
+/*.rbxm
 /src/Packages
